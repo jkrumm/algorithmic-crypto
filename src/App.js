@@ -7,19 +7,16 @@ import Header from "./components/header/Header";
 
 export default withRouter(function App() {
   return (
-      <div className={`wrapper ${Classes.DARK}`}>
-        <Header />
-        <main className="main-grid-container">
-          <Switch>
-            <Route path="/" exact>
-              <Dashboard />
-            </Route>
-          </Switch>
-        </main>
-        <footer>
-          Copyright: SS 2021 / Hochschuule München - Blockchain Seminar /
-          Johannes, Trajche, Kok
-        </footer>
-      </div>
+    <div className={`wrapper ${Classes.DARK}`}>
+      <Header />
+      <main className="main-grid-container">
+        <Switch>
+          <Route path="/" exact>
+            <Dashboard />
+          </Route>
+        </Switch>
+      </main>
+      <footer>Copyright: Johannes Krumm 2021 jokrumm@gmail.com</footer>
+    </div>
   );
 });

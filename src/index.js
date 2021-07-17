@@ -1,13 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import 'normalize.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "normalize.css";
 import { FocusStyleManager } from "@blueprintjs/core";
 import "@blueprintjs/core/lib/css/blueprint.css";
-import './index.scss';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import {Router} from "react-router-dom";
+import "./index.scss";
+import { Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
+import reportWebVitals from "./reportWebVitals";
+import App from "./App";
 
 require("dotenv").config();
 
@@ -16,12 +16,11 @@ const history = createBrowserHistory();
 ReactDOM.render(
   <React.StrictMode>
     <Router history={history}>
-    <App />
+      <App />
     </Router>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
 
 FocusStyleManager.onlyShowFocusOnTabs();
 

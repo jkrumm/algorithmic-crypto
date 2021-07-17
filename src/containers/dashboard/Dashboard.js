@@ -5,13 +5,7 @@ export default function Dashboard(props) {
   const [active, setActive] = useState({});
   const { data, id } = props;
 
-  useEffect(() => {
+  useEffect(() => {}, []);
 
-  }, []);
-
-  return (
-    <div className="dashboard">
-      Test
-    </div>
-  );
+  return <div className="dashboard">Test</div>;
 }
