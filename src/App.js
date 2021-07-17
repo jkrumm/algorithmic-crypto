@@ -1,23 +1,25 @@
-import './App.scss';
+import React, { useEffect, useState } from "react";
+import { withRouter, Switch, Route } from "react-router-dom";
+import { Classes } from "@blueprintjs/core";
+import Dashboard from "./containers/dashboard/Dashboard";
+import "./App.scss";
+import Header from "./components/header/Header";
 
-function App() {
+export default withRouter(function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className={`wrapper ${Classes.DARK}`}>
+        <Header />
+        <main className="main-grid-container">
+          <Switch>
+            <Route path="/" exact>
+              <Dashboard />
+            </Route>
+          </Switch>
+        </main>
+        <footer>
+          Copyright: SS 2021 / Hochschuule München - Blockchain Seminar /
+          Johannes, Trajche, Kok
+        </footer>
+      </div>
   );
-}
-
-export default App;
+});
